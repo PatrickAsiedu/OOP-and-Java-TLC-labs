@@ -1,19 +1,23 @@
 package objectsandclasses;
 
-public class Trade {
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public abstract class Trade {
     private String id;
     private String symbol;
     private int quantity;
     private double price;
+    private  LocalDate date;
+    private LocalTime time;
 
 
-    public Trade(){
-    }
 
 
     public Trade (String id , String symbol, int quantity , double price){
       this(id , symbol, quantity);
       setPrice(price);
+
 
     }
 
@@ -21,6 +25,8 @@ public class Trade {
         this.id=id;
         this.symbol=symbol;
         this.quantity=quantity;
+        this.date=LocalDate.now();
+        this.time=LocalTime.now();
     }
 
     public void setPrice(double price){
@@ -31,6 +37,20 @@ public class Trade {
             this.price = price;
         }
     }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public abstract double calcDividend();
 
 
 
@@ -46,17 +66,7 @@ public class Trade {
                 '}';
     }
 
-    public double getPrice() {
-        return price;
-    }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 }
 
 

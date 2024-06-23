@@ -1,5 +1,6 @@
 import Arrays.IntArray;
 import objectsandclasses.Trade;
+import java.time.*;
 
 
 public class Main {
@@ -10,8 +11,10 @@ public class Main {
 //            System.out.println(i);
 //        }
 
-        Trade mytrade = new Trade("T1", "AAPL", 100 ,10);
-        System.out.println(mytrade);
+//        Trade mytrade = new Trade("T1", "AAPL", 100 ,10);
+//        System.out.println(mytrade);
+
+        System.out.println(LocalTime.now());
 
 
 
