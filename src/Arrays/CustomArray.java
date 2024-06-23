@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Arrays;
+
 public class CustomArray {
     int [] myarray  =  new int [6];
     
@@ -20,7 +22,9 @@ public class CustomArray {
                 number = (int) (Math.random() * (max )) + min;
             } while (contains(number, i));
             myarray[i] = number;
+
         }
+        Arrays.sort(myarray);
     }
 
     private boolean contains(int number, int uptoIndex) {
@@ -37,6 +41,10 @@ public class CustomArray {
     }
 
 
+    @Override
+    public String toString() {
+        return Arrays.toString(myarray);
+    }
 }
 
 

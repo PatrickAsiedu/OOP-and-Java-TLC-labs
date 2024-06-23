@@ -6,6 +6,11 @@ public class Silver extends MembershipType{
     }
 
     @Override
+    public boolean canTrade(Client client) {
+        return false;
+    }
+
+    @Override
     public boolean isEligible(int points) {
         return points >=10 &&  points < 20;
     }
