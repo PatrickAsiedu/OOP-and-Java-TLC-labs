@@ -54,6 +54,11 @@ public class Client {
         }
     }
 
+//    public void canTrade(){
+//
+//
+//    }
+
     public void updateMembership(){
         if (tradingPoints >= 20) {
             membershipType = new Gold();

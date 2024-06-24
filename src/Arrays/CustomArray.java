@@ -22,7 +22,7 @@ public class CustomArray {
                 number = (int) (Math.random() * (max )) + min;
             } while (contains(number, i));
             myarray[i] = number;
-
+        //do insertion sort here
         }
         Arrays.sort(myarray);
     }

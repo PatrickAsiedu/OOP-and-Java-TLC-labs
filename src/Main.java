@@ -1,8 +1,5 @@
-import Arrays.IntArray;
-import objectsandclasses.Trade;
-import java.time.*;
-import Arrays.CustomArray;
-
+import mycollections.MyArrayList;
+import mycollections.MyHashSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,8 +14,16 @@ public class Main {
 
 //        System.out.println(LocalTime.now());
 
-        CustomArray array = new CustomArray();
-        System.out.println(array);
+//        CustomArray array = new CustomArray();
+//        System.out.println(array);
+//        MyArrayList list = new MyArrayList();
+//        System.out.println(list);
+
+        MyHashSet set = new MyHashSet();
+        System.out.println(set);
+
+
+
 
 
 
