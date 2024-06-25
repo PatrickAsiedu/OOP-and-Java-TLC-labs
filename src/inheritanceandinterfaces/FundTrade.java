@@ -1,5 +1,6 @@
 package inheritanceandinterfaces;
 
+import exceptions.TradeIDException;
 import objectsandclasses.Trade;
 
 public class FundTrade extends Trade {
@@ -7,7 +8,7 @@ public class FundTrade extends Trade {
     private double divpercentage;
 
 
-    public FundTrade(String id, String symbol, int quantity, double price, double dividend) {
+    public FundTrade(String id, String symbol, int quantity, double price, double dividend) throws TradeIDException {
         super(id, symbol, quantity, price);
         this.dividend = getPrice() * (divpercentage/100);
     }

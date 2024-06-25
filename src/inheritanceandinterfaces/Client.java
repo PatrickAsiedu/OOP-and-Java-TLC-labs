@@ -4,12 +4,14 @@ import objectsandclasses.Trade;
 
 import java.util.ArrayList;
 import java.util.List;
+import enums.Membership;
 
 public class Client {
     private String firstName;
     private String lastName;
     private  int tradingPoints;
     private MembershipType membershipType;
+    private Membership membership;
     private List<Trade> trades = new ArrayList<>();
     private int tradesDaily;
 
@@ -29,11 +31,12 @@ public class Client {
         this.tradesDaily = tradesDaily;
     }
 
-    public Client(String firstName, String lastName, int tradingPoints, MembershipType membershipType) {
+    public Client(String firstName, String lastName, int tradingPoints, Membership membership) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.tradingPoints = 0;
-        this.membershipType = null;
+//        this.membershipType = null;
+        this.membership= membership;
     }
 
     public void trade(Trade trade){
@@ -102,6 +105,7 @@ public class Client {
         this.membershipType = membershipType;
     }
 
+
     @Override
     public String toString() {
         return "Client{" +
@@ -109,8 +113,9 @@ public class Client {
                 ", lastName='" + lastName + '\'' +
                 ", tradingPoints=" + tradingPoints +
                 ", membershipType=" + membershipType +
+                ", membership=" + membership +
+                ", trades=" + trades +
+                ", tradesDaily=" + tradesDaily +
                 '}';
     }
-
-
 }
