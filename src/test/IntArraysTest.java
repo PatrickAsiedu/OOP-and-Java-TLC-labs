@@ -1,6 +1,6 @@
 package test;
 
-import Arrays.IntArray;
+import arrays.IntArray;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

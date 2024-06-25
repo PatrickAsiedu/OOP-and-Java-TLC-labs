@@ -1,5 +1,10 @@
+import fucntionaljava.Tuple;
+import fucntionaljava.Zip;
 import mycollections.MyArrayList;
 import mycollections.MyHashSet;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +26,20 @@ public class Main {
 
         MyHashSet set = new MyHashSet();
         System.out.println(set);
+
+        Zip zipFunc = (list1, list2)->{
+            List<Tuple<String,String>> zippedList = new ArrayList<>();
+            for (int i =0; i<list1.size();i++){
+                zippedList.add(new Tuple<>(list1.get(i) ,list2.get(i)));
+            }
+            return zippedList;
+        };
+
+        List<String> list1 = List.of("a","b","c");
+        List<String> list2 = List.of("1","2","3");
+
+        List<Tuple<String,String>> result = zipFunc.zip(list1,list2);
+        System.out.println(result);
 
 
 

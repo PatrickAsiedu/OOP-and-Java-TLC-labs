@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 public class IntArray {
     private int [] myarray;
